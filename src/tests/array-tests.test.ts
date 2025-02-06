@@ -1,4 +1,4 @@
-import { Algoritimos } from "..";
+import { Algoritimos } from "../algoritmos-classe";
 
 
 describe('teste de manipulação de array', () => {
@@ -14,7 +14,9 @@ describe('teste de manipulação de array', () => {
     });
 
     test('Dado um array desordenado, o método deve ser retornado um array ordenado decrescente', () => {
-        expect([3,2,8,6,4,1]).toBe([8,6,4,3,2,1]);
+        const arrayDesordenado = [1,2,3,4,5];
+        const arrayOrdenado = algoritmo.arrayOrdenadoDecrescente(arrayDesordenado);
+        expect(arrayOrdenado).toEqual([5,4,3,2,1]);
     })
 
 })
