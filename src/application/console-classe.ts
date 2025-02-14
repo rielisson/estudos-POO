@@ -28,6 +28,7 @@ export class ConsoleApplication implements Application {
       this.ordenarArray()
     } else if (answer === '2') {
       console.log('vc selecionou 2');
+      this.ordenarArrayDecrescente();
     } else if (answer === '3') {
       console.log('vc selecionou 3');
     } else if (answer === '4') {
@@ -50,6 +51,16 @@ export class ConsoleApplication implements Application {
     })
   }
 
+  ordenarArrayDecrescente() {
+    this.rl.question('Digite quantos os numeros que vão ser ordenados decrescente\nobs separe por virgular;\n', (numerosIndice: string) => {
+      let arrayString = numerosIndice.split(`,`);
+      let arrayNumber = arrayString.map(Number);
+      let arrayOrdenado = this.manipularArray.arrayOrdenadoDecrescente(arrayNumber);
+      console.log(arrayOrdenado);
+      console.log("O Array foi ordenado com sucesso;");
+      this.setDadoConsole(this.verificaEntradaUsuarioConsole);
+    })
+  }
 }
 
 const manipulacao = new Algoritimos
