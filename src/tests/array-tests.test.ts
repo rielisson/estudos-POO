@@ -19,4 +19,9 @@ describe('teste de manipulação de array', () => {
         expect(arrayOrdenado).toEqual([5,4,3,2,1]);
     })
 
+    test("Dado um array com numeros duplicados, o método deve ser retornado um array sem numeros duplicados", () => {
+        const arrayDuplicado = [1,1,2,2,3,3,4,4,5,5,6,6,7,7];
+        const arraySemDuplicados = algoritmo.arrayDuplicados(arrayDuplicado);
+        expect(arraySemDuplicados).toEqual([1,2,3,4,5,6,7]);
+    })
 })
