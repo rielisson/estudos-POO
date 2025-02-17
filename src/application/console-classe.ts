@@ -16,6 +16,7 @@ export class ConsoleApplication implements Application {
   });
 
   run(): void {
+    this.setDadoConsole(this.verificaEntradaUsuarioConsole);
   }
 
   setDadoConsole(callback: (answer: string) => void) {
@@ -77,7 +78,3 @@ export class ConsoleApplication implements Application {
 
 const manipulacao = new Algoritimos
 const consoleApplication = new ConsoleApplication(manipulacao);
-// console.log(consoleApplication.oderdenarArray([1,4,3,6,2,10,20,14]));
-
-consoleApplication.setDadoConsole(consoleApplication.verificaEntradaUsuarioConsole);
-
